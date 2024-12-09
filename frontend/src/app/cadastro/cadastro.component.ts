@@ -1,30 +1,36 @@
-import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { Component } from '@angular/core';
+import { Paciente } from '../model/paciente';
+import { PacienteService } from '../service/paciente.service';
+
 @Component({
   selector: 'app-cadastro',
   standalone: true,
-  imports: [FormsModule],
+  imports: [CommonModule, FormsModule],
   templateUrl: './cadastro.component.html',
-  styleUrl: './cadastro.component.css'
+  styleUrl: './cadastro.component.css',
+  providers: [PacienteService]
 })
-export class CadastroComponent {
- 
-  paciente = {
-    nomeCompleto: '',
-    nomeSocial: '',
-    nomePai: '',
-    nomeMae: '',
-    dataNascimento: '',
-    sexo: '',
-    nacionalidade: '',
-    racaCor: '',
-    contato: '',
-    cpf: '',
-    identidade: ''
-  };
 
-  onSubmit() {
-    console.log('Dados do paciente:', this.paciente);
-  
+export class CadastroComponent {
+  public obj: Paciente = new Paciente();
+  public mensagem: string = "";
+
+  constructor(private service: PacienteService) { }
+
+  public salvar(){
+    this.service.salvar(this.obj).subscribe({
+        next:(data)=>{this.mensagem="cliente inserido com sucesso!";},
+        error:(msg)=>{this.mensagem="ocorreu erro tente mais tarde!";}
+
+        
+     });
+     this.limpar();
   }
+
+  public limpar(){
+    this.obj = new Paciente();
+  }
+
 }
