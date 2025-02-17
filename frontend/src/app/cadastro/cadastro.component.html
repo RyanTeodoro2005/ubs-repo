@@ -11,27 +11,27 @@
 
     <div class="mb-3">
       <label for="nome">Nome</label>
-      <input type="text" id="nome" [(ngModel)]="obj.nome">
+      <input type="text" placeholder="Digite o Nome do Paciente" id="nome" [(ngModel)]="obj.nome">
     </div>
 
     <div class="mb-3">
       <label for="cpf">CPF</label>
-      <input type="text" id="cpf" [(ngModel)]="obj.cpf">
+      <input type="text" maxlength="14" placeholder="Informe o CPF" id="cpf" [(ngModel)]="obj.cpf">
     </div>
 
     <div class="mb-3">
       <label for="nomeSocial">Nome Social</label>
-      <input type="text" id="nomeSocial" [(ngModel)]="obj.nomeSocial">
+      <input type="text" placeholder="Digite o Nome Social" id="nomeSocial" [(ngModel)]="obj.nomeSocial">
     </div>
 
     <div class="mb-3">
       <label for="nomeMae">Nome da Mãe</label>
-      <input type="text" id="nomeMae" [(ngModel)]="obj.nomeMae">
+      <input type="text" placeholder="Digite o Nome da Mãe" id="nomeMae" [(ngModel)]="obj.nomeMae">
     </div>
 
     <div class="mb-3">
       <label for="dataNascimento">Data de Nascimento</label>
-      <input type="date" id="dataNascimento" [(ngModel)]="obj.dataNascimento">
+      <input type="date" placeholder="Digite a Data de Nascimento" id="dataNascimento" [(ngModel)]="obj.dataNascimento">
     </div>
 
     <div class="mb-3">
@@ -40,22 +40,29 @@
         <option value="masculino">Masculino</option>
         <option value="feminino">Feminino</option>
         <option value="outro">Outro</option>
+        <option value="PrefereNI">Prefere Não Informar</option>
       </select>
     </div>
 
     <div class="mb-3">
       <label for="nacionalidade">Nacionalidade</label>
-      <input type="text" id="nacionalidade" [(ngModel)]="obj.nacionalidade">
+      <input type="text" placeholder="Digite a Nacionalidade" id="nacionalidade" [(ngModel)]="obj.nacionalidade">
     </div>
 
     <div class="mb-3">
       <label for="municipioNascimento">Município de Nascimento</label>
-      <input type="text" id="municipioNascimento" [(ngModel)]="obj.municipioNascimento">
+      <input type="text" placeholder="Digite o Município de Nascimento" id="municipioNascimento" [(ngModel)]="obj.municipioNascimento">
     </div>
 
     <div class="mb-3">
       <label for="racaCor">Raça/Cor</label>
-      <input type="text" id="racaCor" [(ngModel)]="obj.racaCor">
+      <select placeholder="Escolha uma das opções" id="racaCor" [(ngModel)]="obj.racaCor">
+        <option value="Branca">Branca</option>
+        <option value="Preta">Preta</option>
+        <option value="Parda">Parda</option>
+        <option value="Amarela">Amerela</option>
+        <option value="PrefereNI">Prefere Não Informar</option>
+      </select>
     </div>
   </section>
 
@@ -64,7 +71,7 @@
     <h3>Escolaridade e Situação Familiar</h3>
     <div class="mb-3">
       <label for="frequentaEscola">Frequenta Escola</label>
-      <select id="frequentaEscola" [(ngModel)]="obj.frequentaEscola">
+      <select placeholder="Escolha uma das opções" id="frequentaEscola" [(ngModel)]="obj.frequentaEscola">
         <option value="sim">Sim</option>
         <option value="nao">Não</option>
       </select>
@@ -72,22 +79,22 @@
 
     <div class="mb-3">
       <label for="escolaridade">Escolaridade</label>
-      <input type="text" id="escolaridade" [(ngModel)]="obj.escolaridade">
+      <input type="text" placeholder="Digite a Escolaridade" id="escolaridade" [(ngModel)]="obj.escolaridade">
     </div>
 
     <div class="mb-3">
       <label for="situacaoFamiliar">Situação Familiar</label>
-      <input type="text" id="situacaoFamiliar" [(ngModel)]="obj.situacaoFamiliar">
+      <input type="text" placeholder="Digite a Siruação Familiar" id="situacaoFamiliar" [(ngModel)]="obj.situacaoFamiliar">
     </div>
 
     <div class="mb-3">
       <label for="estabelecimentoVinculo">Estabelecimento Vinculado</label>
-      <input type="text" id="estabelecimentoVinculo" [(ngModel)]="obj.estabelecimentoVinculo">
+      <input type="text" placeholder="Digite o Estabelecimento Vinculado" id="estabelecimentoVinculo" [(ngModel)]="obj.estabelecimentoVinculo">
     </div>
 
     <div class="mb-3">
       <label for="estabelecimentoCadastro">Estabelecimento Cadastro</label>
-      <input type="text" id="estabelecimentoCadastro" [(ngModel)]="obj.estabelecimentoCadastro">
+      <input type="text" placeholder="Digite o Estabelecimento de Cadastro" id="estabelecimentoCadastro" [(ngModel)]="obj.estabelecimentoCadastro">
     </div>
   </section>
 
@@ -96,12 +103,12 @@
     <h3>Deficiência</h3>
     <div class="mb-3">
       <label for="deficiencia">Deficiência</label>
-      <input type="text" id="deficiencia" [(ngModel)]="obj.deficiencia">
+      <input type="text" placeholder="Digite a Deficiência" id="deficiencia" [(ngModel)]="obj.deficiencia">
     </div>
 
     <div class="mb-3">
       <label for="deficienciaDetalhe">Detalhe da Deficiência</label>
-      <input type="text" id="deficienciaDetalhe" [(ngModel)]="obj.deficienciaDetalhe">
+      <input type="text" placeholder="Digite Detalhes da Deficiência" id="deficienciaDetalhe" [(ngModel)]="obj.deficienciaDetalhe">
     </div>
   </section>
 
@@ -110,12 +117,12 @@
     <h3>Endereço</h3>
     <div class="mb-3">
       <label for="origemEndereco">Origem do Endereço</label>
-      <input type="text" id="origemEndereco" [(ngModel)]="obj.origemEndereco">
+      <input type="text" placeholder="Digite a origem do Endereço" id="origemEndereco" [(ngModel)]="obj.origemEndereco">
     </div>
 
     <div class="mb-3">
       <label for="endereco">Endereço</label>
-      <input type="text" id="endereco" [(ngModel)]="obj.endereco">
+      <input type="text" placeholder="Digite um Endereço" id="endereco" [(ngModel)]="obj.endereco">
     </div>
   </section>
 
@@ -124,27 +131,27 @@
     <h3>Dados de Contato</h3>
     <div class="mb-3">
       <label for="celular">Celular</label>
-      <input type="text" id="celular" [(ngModel)]="obj.celular">
+      <input type="text" maxlength="13" placeholder="Digite um número de Celular" id="celular" [(ngModel)]="obj.celular">
     </div>
 
     <div class="mb-3">
       <label for="residencial">Residencial</label>
-      <input type="text" id="residencial" [(ngModel)]="obj.residencial">
+      <input type="text" maxlength="12" placeholder="Digite um número Residencial" id="residencial" [(ngModel)]="obj.residencial">
     </div>
 
     <div class="mb-3">
       <label for="comercial">Comercial</label>
-      <input type="text" id="comercial" [(ngModel)]="obj.comercial">
+      <input type="text" maxlength="12" placeholder="Digite um número de Comercial" id="comercial" [(ngModel)]="obj.comercial">
     </div>
 
     <div class="mb-3">
       <label for="contato">Contato</label>
-      <input type="text" id="contato" [(ngModel)]="obj.contato">
+      <input type="text" maxlength="14" placeholder="Digite um número de Contato" id="contato" [(ngModel)]="obj.contato">
     </div>
 
     <div class="mb-3">
       <label for="email">Email</label>
-      <input type="email" id="email" [(ngModel)]="obj.email">
+      <input type="email" placeholder="Digite o Email" id="email" [(ngModel)]="obj.email">
     </div>
   </section>
 
@@ -153,7 +160,7 @@
     <h3>Identidade</h3>
     <div class="mb-3">
       <label for="identidade">Identidade</label>
-      <input type="text" id="identidade" [(ngModel)]="obj.identidade">
+      <input type="text" maxlength="14" placeholder="Identidade" id="identidade" [(ngModel)]="obj.identidade">
     </div>
   </section>
 
